@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Lengkap Tenses Bahasa Inggris</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Warm Neutrals with Sage Green Accent -->
+    <!-- Application Structure Plan: Menggunakan struktur navigasi samping (sidebar) yang tetap terlihat untuk akses cepat ke setiap Tense. Konten utama di sebelah kanan akan berubah secara dinamis sesuai pilihan Tense. Setiap bagian Tense memiliki tab interaktif untuk beralih antara "Active Voice" dan "Passive Voice". Struktur ini dipilih karena memungkinkan pengguna untuk fokus pada satu topik Tense pada satu waktu sambil tetap mudah beralih ke topik lain tanpa harus scroll panjang. Penggunaan tab Active/Passive secara langsung memfasilitasi perbandingan antara dua struktur kalimat, yang merupakan inti dari permintaan pengguna dan sangat efektif untuk pembelajaran. -->
+    <!-- Visualization & Content Choices: 
+        - Verb Forms Table: Goal=Informasi Dasar. Method=Tabel HTML. Interaction=Tidak ada. Justification=Menyajikan data dasar (V1,V2,V3) dalam format yang paling jelas dan terstruktur.
+        - Tense Sections: Goal=Edukasi Mendalam. Method=Teks penjelasan, blok rumus, dan tabel contoh. Interaction=Navigasi sidebar untuk memilih Tense, Tab untuk beralih Active/Passive. Justification=Memecah informasi kompleks menjadi bagian-bagian yang dapat dikelola. Interaksi tab memungkinkan pengguna mengontrol informasi yang ditampilkan, mengurangi beban kognitif dan memfasilitasi perbandingan langsung.
+        - Formula Blocks: Goal=Menyajikan Aturan. Method=Blok HTML dengan styling khusus. Interaction=Tidak ada. Justification=Membuat rumus grammatical menonjol dan mudah diingat.
+        - Example Tables (+, -, ?): Goal=Ilustrasi Penggunaan. Method=Tabel HTML. Interaction=Tidak ada. Justification=Menyajikan variasi kalimat secara sistematis untuk pemahaman yang komprehensif.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-btn.active { background-color: #059669; color: white; }
+        .nav-link.active { background-color: #D1FAE5; color: #065F46; font-weight: 600; }
+    </style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-64 bg-white border-b md:border-r border-stone-200 flex-shrink-0">
+            <div class="p-5 border-b border-stone-200">
+                <h1 class="text-xl font-bold text-emerald-700">Master Tenses</h1>
+                <p class="text-sm text-stone-500">Panduan Interaktif Anda</p>
+            </div>
+            <nav id="navigation" class="p-2">
+                <a href="#" class="nav-link block p-3 rounded-lg text-stone-700 hover:bg-stone-100 transition-colors duration-200" data-target="verb-forms">Dasar Kata Kerja (Verb)</a>
+                <a href="#" class="nav-link block p-3 rounded-lg text-stone-700 hover:bg-stone-100 transition-colors duration-200" data-target="simple-present">1. Simple Present Tense</a>
+                <a href="#" class="nav-link block p-3 rounded-lg text-stone-700 hover:bg-stone-100 transition-colors duration-200" data-target="simple-past">2. Simple Past Tense</a>
+                <a href="#" class="nav-link block p-3 rounded-lg text-stone-700 hover:bg-stone-100 transition-colors duration-200" data-target="simple-future">3. Simple Future Tense</a>
+                <a href="#" class="nav-link block p-3 rounded-lg text-stone-700 hover:bg-stone-100 transition-colors duration-200" data-target="present-continuous">4. Present Continuous</a>
+                <a href="#" class="nav-link block p-3 rounded-lg text-stone-700 hover:bg-stone-100 transition-colors duration-200" data-target="present-perfect">5. Present Perfect</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 sm:p-8 lg:p-10">
+            <!-- Section: Verb Forms -->
+            <section id="verb-forms" class="content-section">
+                <h2 class="text-3xl font-bold text-stone-900 mb-2">Dasar Kata Kerja (Verb Forms)</h2>
+                <p class="text-stone-600 mb-6">Sebelum masuk ke Tenses, penting untuk memahami bentuk-bentuk kata kerja. Kata kerja dalam bahasa Inggris berubah bentuk tergantung pada waktunya. Inilah fondasi utama untuk menguasai Tenses.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h3 class="font-bold text-lg mb-4 text-emerald-700">Tabel Perubahan Kata Kerja</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-stone-100">
+                                <tr>
+                                    <th class="p-3 font-semibold">V1 (Infinitive)</th>
+                                    <th class="p-3 font-semibold">V2 (Simple Past)</th>
+                                    <th class="p-3 font-semibold">V3 (Past Participle)</th>
+                                    <th class="p-3 font-semibold">V-ing (Present Participle)</th>
+                                    <th class="p-3 font-semibold">Arti</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b"><td class="p-3">eat</td><td class="p-3">ate</td><td class="p-3">eaten</td><td class="p-3">eating</td><td class="p-3">Makan</td></tr>
+                                <tr class="border-b"><td class="p-3">go</td><td class="p-3">went</td><td class="p-3">gone</td><td class="p-3">going</td><td class="p-3">Pergi</td></tr>
+                                <tr class="border-b"><td class="p-3">study</td><td class="p-3">studied</td><td class="p-3">studied</td><td class="p-3">studying</td><td class="p-3">Belajar</td></tr>
+                                <tr class="border-b"><td class="p-3">write</td><td class="p-3">wrote</td><td class="p-3">written</td><td class="p-3">writing</td><td class="p-3">Menulis</td></tr>
+                                <tr class="border-b"><td class="p-3">read</td><td class="p-3">read</td><td class="p-3">read</td><td class="p-3">reading</td><td class="p-3">Membaca</td></tr>
+                                <tr><td class="p-3">make</td><td class="p-3">made</td><td class="p-3">made</td><td class="p-3">making</td><td class="p-3">Membuat</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Simple Present -->
+            <section id="simple-present" class="content-section">
+                <h2 class="text-3xl font-bold text-stone-900 mb-2">1. Simple Present Tense</h2>
+                <p class="text-stone-600 mb-6">Digunakan untuk menyatakan fakta, kebiasaan, atau kejadian yang terjadi berulang-ulang saat ini.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex border-b border-stone-200 mb-4">
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="sp-active">Active Voice</button>
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="sp-passive">Passive Voice</button>
+                    </div>
+                    <div id="sp-active" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Active</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + V1(s/es) + O/C<br>[-] S + do/does + not + V1 + O/C<br>[?] Do/Does + S + V1 + O/C?</div>
+                        <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Active</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">He reads a book every day.</td><td class="p-2">Sebuah kebiasaan yang dilakukan rutin.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">He does not read a book every day.</td><td class="p-2">Menyatakan negasi dari kebiasaan.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Does he read a book every day?</td><td class="p-2">Menanyakan tentang kebiasaan tersebut.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="sp-passive" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Passive</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + is/am/are + V3 + by + O<br>[-] S + is/am/are + not + V3 + by + O<br>[?] Is/Am/Are + S + V3 + by + O?</div>
+                         <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Passive</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">A book is read by him every day.</td><td class="p-2">Fokus pada objek (buku) yang dikenai tindakan.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">A book is not read by him every day.</td><td class="p-2">Menyangkal bahwa buku itu dibaca olehnya.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Is a book read by him every day?</td><td class="p-2">Menanyakan apakah tindakan itu dilakukan pada buku.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Simple Past -->
+            <section id="simple-past" class="content-section">
+                <h2 class="text-3xl font-bold text-stone-900 mb-2">2. Simple Past Tense</h2>
+                <p class="text-stone-600 mb-6">Digunakan untuk menyatakan suatu kejadian yang terjadi dan selesai di masa lampau.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex border-b border-stone-200 mb-4">
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="spa-active">Active Voice</button>
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="spa-passive">Passive Voice</button>
+                    </div>
+                    <div id="spa-active" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Active</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + V2 + O/C<br>[-] S + did + not + V1 + O/C<br>[?] Did + S + V1 + O/C?</div>
+                        <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Active</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">She wrote a letter yesterday.</td><td class="p-2">Aksi menulis sudah selesai di masa lampau.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">She did not write a letter yesterday.</td><td class="p-2">Menyangkal kejadian di masa lampau.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Did she write a letter yesterday?</td><td class="p-2">Bertanya tentang kejadian di masa lampau.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="spa-passive" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Passive</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + was/were + V3 + by + O<br>[-] S + was/were + not + V3 + by + O<br>[?] Was/Were + S + V3 + by + O?</div>
+                         <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Passive</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">A letter was written by her yesterday.</td><td class="p-2">Fokus pada objek (surat) yang ditulis.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">A letter was not written by her yesterday.</td><td class="p-2">Menyangkal bahwa surat itu ditulis olehnya.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Was a letter written by her yesterday?</td><td class="p-2">Menanyakan apakah surat itu ditulis olehnya.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Simple Future -->
+            <section id="simple-future" class="content-section">
+                 <h2 class="text-3xl font-bold text-stone-900 mb-2">3. Simple Future Tense</h2>
+                <p class="text-stone-600 mb-6">Digunakan untuk menyatakan suatu kejadian yang akan terjadi di masa depan.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex border-b border-stone-200 mb-4">
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="sf-active">Active Voice</button>
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="sf-passive">Passive Voice</button>
+                    </div>
+                    <div id="sf-active" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Active</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + will + V1 + O/C<br>[-] S + will + not + V1 + O/C<br>[?] Will + S + V1 + O/C?</div>
+                        <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Active</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">They will build a new house.</td><td class="p-2">Sebuah rencana atau prediksi di masa depan.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">They will not build a new house.</td><td class="p-2">Menyatakan rencana itu tidak akan terjadi.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Will they build a new house?</td><td class="p-2">Menanyakan tentang rencana di masa depan.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="sf-passive" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Passive</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + will be + V3 + by + O<br>[-] S + will not be + V3 + by + O<br>[?] Will + S + be + V3 + by + O?</div>
+                         <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Passive</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">A new house will be built by them.</td><td class="p-2">Fokus pada objek (rumah) yang akan dibangun.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">A new house will not be built by them.</td><td class="p-2">Menyangkal bahwa rumah itu akan dibangun.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Will a new house be built by them?</td><td class="p-2">Menanyakan tentang rencana pembangunan rumah.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Present Continuous -->
+            <section id="present-continuous" class="content-section">
+                <h2 class="text-3xl font-bold text-stone-900 mb-2">4. Present Continuous Tense</h2>
+                <p class="text-stone-600 mb-6">Digunakan untuk menyatakan kejadian yang sedang berlangsung saat ini atau sekitar waktu pembicaraan.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex border-b border-stone-200 mb-4">
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="pc-active">Active Voice</button>
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="pc-passive">Passive Voice</button>
+                    </div>
+                    <div id="pc-active" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Active</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + is/am/are + V-ing + O/C<br>[-] S + is/am/are + not + V-ing + O/C<br>[?] Is/Am/Are + S + V-ing + O/C?</div>
+                        <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Active</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">I am studying English now.</td><td class="p-2">Aksi sedang terjadi pada saat berbicara.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">I am not studying English now.</td><td class="p-2">Menyangkal aksi yang sedang terjadi.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Are you studying English now?</td><td class="p-2">Menanyakan tentang aksi yang sedang terjadi.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="pc-passive" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Passive</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + is/am/are + being + V3 + by + O<br>[-] S + is/am/are + not + being + V3 + by + O<br>[?] Is/Am/Are + S + being + V3 + by + O?</div>
+                         <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Passive</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">English is being studied by me now.</td><td class="p-2">Fokus pada objek (English) yang sedang dipelajari.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">English is not being studied by me now.</td><td class="p-2">Menyangkal bahwa English sedang dipelajari.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Is English being studied by you now?</td><td class="p-2">Menanyakan tentang aksi yang terjadi pada objek.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Present Perfect -->
+            <section id="present-perfect" class="content-section">
+                <h2 class="text-3xl font-bold text-stone-900 mb-2">5. Present Perfect Tense</h2>
+                <p class="text-stone-600 mb-6">Digunakan untuk menyatakan kejadian yang sudah terjadi di waktu yang tidak spesifik di masa lampau tapi masih ada hubungannya dengan sekarang, atau baru saja selesai.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex border-b border-stone-200 mb-4">
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="pp-active">Active Voice</button>
+                        <button class="tab-btn py-2 px-4 font-semibold text-stone-600" data-target="pp-passive">Passive Voice</button>
+                    </div>
+                    <div id="pp-active" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Active</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + have/has + V3 + O/C<br>[-] S + have/has + not + V3 + O/C<br>[?] Have/Has + S + V3 + O/C?</div>
+                        <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Active</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">She has finished her homework.</td><td class="p-2">Aksi sudah selesai dan hasilnya (PR selesai) terlihat sekarang.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">She has not finished her homework.</td><td class="p-2">Menyatakan aksinya belum selesai hingga sekarang.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Has she finished her homework?</td><td class="p-2">Menanyakan status penyelesaian tugasnya.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="pp-passive" class="tab-content">
+                        <h3 class="font-bold text-lg mb-2 text-emerald-700">Rumus Passive</h3>
+                        <div class="bg-stone-100 p-3 rounded-lg mb-4 text-sm font-mono">[+] S + have/has + been + V3 + by + O<br>[-] S + have/has + not + been + V3 + by + O<br>[?] Have/Has + S + been + V3 + by + O?</div>
+                         <h3 class="font-bold text-lg mt-6 mb-4 text-emerald-700">Contoh Kalimat Passive</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead><tr><th class="p-2 w-8"></th><th class="p-2">Kalimat</th><th class="p-2">Penjelasan</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="p-2 font-bold text-emerald-600">(+)</td><td class="p-2">Her homework has been finished by her.</td><td class="p-2">Fokus pada objek (PR) yang telah diselesaikan.</td></tr>
+                                    <tr><td class="p-2 font-bold text-red-600">(-)</td><td class="p-2">Her homework has not been finished by her.</td><td class="p-2">Menyatakan bahwa PR tersebut belum diselesaikan.</td></tr>
+                                    <tr><td class="p-2 font-bold text-blue-600">(?)</td><td class="p-2">Has her homework been finished by her?</td><td class="p-2">Menanyakan apakah PR-nya sudah diselesaikan.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            const tabContainers = document.querySelectorAll('.content-section');
+
+            function showContent(targetId) {
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(targetId).classList.add('active');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if(link.dataset.target === targetId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.dataset.target;
+                    showContent(targetId);
+                });
+            });
+
+            tabContainers.forEach(container => {
+                const tabs = container.querySelectorAll('.tab-btn');
+                const tabContents = container.querySelectorAll('.tab-content');
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const targetId = this.dataset.target;
+
+                        tabs.forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+
+                        tabContents.forEach(content => {
+                            content.classList.remove('active');
+                            if (content.id === targetId) {
+                                content.classList.add('active');
+                            }
+                        });
+                    });
+                });
+
+                if (tabs.length > 0) {
+                    tabs[0].click();
+                }
+            });
+
+            showContent('verb-forms');
+        });
+    </script>
+</body>
+</html>
